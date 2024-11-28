@@ -1,0 +1,5 @@
+/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/CMakeFiles/untitled.dir
+/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/CMakeFiles/untitled_autogen_timestamp_deps.dir
+/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/CMakeFiles/untitled_autogen.dir

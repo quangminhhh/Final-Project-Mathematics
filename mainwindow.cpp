@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
     goalComboBox = new QComboBox();
 
     findRouteButton = new QPushButton("Find Route");
-    resetButton = new QPushButton("Reset");
 
     resultLabel = new QLabel("Result: ");
 
@@ -24,7 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
     controlsLayout->addWidget(startComboBox);
     controlsLayout->addWidget(goalComboBox);
     controlsLayout->addWidget(findRouteButton);
-    controlsLayout->addWidget(resetButton);
 
     layout->addWidget(view);
     layout->addLayout(controlsLayout);
@@ -36,7 +34,6 @@ MainWindow::MainWindow(QWidget *parent)
     visualizeGraph();
 
     connect(findRouteButton, &QPushButton::clicked, this, &MainWindow::findOptimalRoute);
-    connect(resetButton, &QPushButton::clicked, this, &MainWindow::resetVisualization);
 }
 
 MainWindow::~MainWindow() {}
@@ -103,6 +100,7 @@ void MainWindow::resetVisualization() {
 }
 
 void MainWindow::findOptimalRoute() {
+    resetVisualization();
     int startIndex = startComboBox->currentIndex();
     int goalIndex = goalComboBox->currentIndex();
 
@@ -111,52 +109,71 @@ void MainWindow::findOptimalRoute() {
         return;
     }
 
+    // Các biến lưu kết quả
     std::vector<int> pathAStar, pathDijkstra;
     double totalDistanceAStar = 0.0, totalCostAStar = 0.0;
     double totalDistanceDijkstra = 0.0, totalCostDijkstra = 0.0;
 
+    // Alpha và Beta (trọng số cho thuật toán A*)
     double alpha = 1.0, beta = 1.0;
 
+    // **1. Chạy thuật toán A***
     auto startAStar = std::chrono::high_resolution_clock::now();
     bool foundAStar = AStar(graph, startIndex, goalIndex, alpha, beta,
                             pathAStar, totalDistanceAStar, totalCostAStar);
     auto endAStar = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> durationAStar = endAStar - startAStar;
 
+    // **2. Chạy thuật toán Dijkstra**
     auto startDijkstra = std::chrono::high_resolution_clock::now();
     bool foundDijkstra = Dijkstra(graph, startIndex, goalIndex,
                                   pathDijkstra, totalDistanceDijkstra, totalCostDijkstra);
     auto endDijkstra = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> durationDijkstra = endDijkstra - startDijkstra;
 
+    // **3. Hiển thị kết quả**
     QString result;
+
+    // Kết quả từ thuật toán A*
     if (foundAStar) {
         result += "A* Algorithm:\nRoute: ";
         for (size_t i = 0; i < pathAStar.size(); ++i) {
             result += QString::fromStdString(graph.nodes[pathAStar[i]].name);
-            if (i != pathAStar.size() - 1) result += " -> ";
+            if (i != pathAStar.size() - 1)
+                result += " -> ";
         }
-        result += QString("\nDistance: %1, Cost: %2\nTime: %3 ms\n")
-                  .arg(totalDistanceAStar)
-                  .arg(totalCostAStar)
-                  .arg(durationAStar.count() * 1000);
+        result += QString("\nDistance: %1, Cost: %2, Time: %3 ms\n\n")
+                  .arg(totalDistanceAStar).arg(totalCostAStar).arg(durationAStar.count() * 1000);
     } else {
-        result += "A* Algorithm: No path found.\n";
+        result += "A* Algorithm: No path found.\n\n";
     }
 
+    // Kết quả từ thuật toán Dijkstra
     if (foundDijkstra) {
-        result += "\nDijkstra Algorithm:\nRoute: ";
+        result += "Dijkstra Algorithm:\nRoute: ";
         for (size_t i = 0; i < pathDijkstra.size(); ++i) {
             result += QString::fromStdString(graph.nodes[pathDijkstra[i]].name);
-            if (i != pathDijkstra.size() - 1) result += " -> ";
+            if (i != pathDijkstra.size() - 1)
+                result += " -> ";
         }
-        result += QString("\nDistance: %1, Cost: %2\nTime: %3 ms\n")
-                  .arg(totalDistanceDijkstra)
-                  .arg(totalCostDijkstra)
-                  .arg(durationDijkstra.count() * 1000);
+        result += QString("\nDistance: %1, Cost: %2, Time: %3 ms")
+                  .arg(totalDistanceDijkstra).arg(totalCostDijkstra).arg(durationDijkstra.count() * 1000);
+
+        // **4. Tô màu đường đi của thuật toán Dijkstra**
+        QPen optimalPathPen(Qt::blue, 3); // Đường màu xanh, độ dày 3
+        for (size_t i = 0; i < pathDijkstra.size() - 1; ++i) {
+            int from = pathDijkstra[i];
+            int to = pathDijkstra[i + 1];
+            scene->addLine(
+                graph.nodes[from].x * 40 + 10, graph.nodes[from].y * 40 + 10,
+                graph.nodes[to].x * 40 + 10, graph.nodes[to].y * 40 + 10,
+                optimalPathPen
+            );
+        }
     } else {
-        result += "\nDijkstra Algorithm: No path found.\n";
+        result += "Dijkstra Algorithm: No path found.";
     }
 
+    // Cập nhật kết quả lên giao diện
     resultLabel->setText(result);
 }

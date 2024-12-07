@@ -37,8 +37,8 @@ private:
 
     QPushButton *findRouteButton;
     QPushButton *resetButton;
-    QPushButton *exportButton; // Nút Export
-    QPushButton *importButton; // Nút Import
+    QPushButton *exportButton;
+    QPushButton *importButton;
 
     QLabel *resultLabel;
     Graph graph;
@@ -52,9 +52,9 @@ private:
         void findOptimalRoute();
     void addNode();
     void addLink();
-    void exportMap(); // Hàm Export
-    void importMap(); // Hàm Import
-    void exportImage(const QString &filePath); // Hàm xuất ảnh
+    void exportMap();
+    void importMap();
+    void exportImage(const QString &filePath);
 };
 
-#endif // MAINWINDOW_H
+#endif

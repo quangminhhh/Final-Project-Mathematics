@@ -962,6 +962,8 @@ untitled_autogen/timestamp: \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/CMakeLists.txt \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/astar.cpp \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/astar.h \
+	/Users/quangminh/Desktop/Discrete\ mathematics/Official/bellman_ford.cpp \
+	/Users/quangminh/Desktop/Discrete\ mathematics/Official/bellman_ford.h \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
 	/Users/quangminh/Desktop/Discrete\ mathematics/Official/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
@@ -1117,7 +1119,9 @@ untitled_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qregion.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
+	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtextformat.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtextoption.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
@@ -1129,6 +1133,7 @@ untitled_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsView \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
+	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
@@ -1141,6 +1146,7 @@ untitled_autogen/timestamp: \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsview.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
+	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
 	/opt/homebrew/Cellar/qt/6.7.3/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \

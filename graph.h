@@ -24,11 +24,11 @@ struct Edge {
 class Graph {
 public:
     std::vector<Node> nodes;
-    std::unordered_map<int, std::vector<Edge>> adjList; // Danh sách các cạnh
+    std::unordered_map<int, std::vector<Edge>> adjList;
 
     void addNode(const std::string &name, double x, double y);
     void addEdge(int from, int to, double distance);
-    bool isConnected(int from, int to); // Kiểm tra hai node đã được kết nối
+    bool isConnected(int from, int to);
 };
 
 #endif

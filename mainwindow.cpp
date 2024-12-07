@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
     QWidget *centralWidget = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(centralWidget);
 
-    // Giao diện tìm đường
     QLabel *startNodeLabel = new QLabel("Select Start Node:");
     QLabel *goalNodeLabel = new QLabel("Select Goal Node:");
     QLabel *algorithmLabel = new QLabel("Choose Algorithm:");
@@ -42,7 +41,6 @@ MainWindow::MainWindow(QWidget *parent)
     findRouteForm->addRow(algorithmLabel, algorithmComboBox);
     findRouteForm->addRow(findRouteButton);
 
-    // Giao diện thêm node mới
     QLabel *nodeNameLabel = new QLabel("Node Name:");
     QLabel *nodeXLabel = new QLabel("X Coordinate:");
     QLabel *nodeYLabel = new QLabel("Y Coordinate:");
@@ -58,7 +56,6 @@ MainWindow::MainWindow(QWidget *parent)
     addNodeForm->addRow(nodeYLabel, nodeYInput);
     addNodeForm->addRow(addNodeButton);
 
-    // Giao diện thêm liên kết giữa hai node
     QLabel *firstNodeLabel = new QLabel("Select First Node:");
     QLabel *secondNodeLabel = new QLabel("Select Second Node:");
     QLabel *linkDistanceLabel = new QLabel("Distance:");
@@ -77,15 +74,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(exportButton, &QPushButton::clicked, this, &MainWindow::exportMap);
     connect(importButton, &QPushButton::clicked, this, &MainWindow::importMap);
 
-
-
     QFormLayout *addLinkForm = new QFormLayout();
     addLinkForm->addRow(firstNodeLabel, firstNodeComboBox);
     addLinkForm->addRow(secondNodeLabel, secondNodeComboBox);
     addLinkForm->addRow(linkDistanceLabel, linkDistanceInput);
     addLinkForm->addRow(addLinkButton);
 
-    // Thêm các layout vào giao diện chính
     mainLayout->addWidget(view);
     mainLayout->addLayout(findRouteForm);
     mainLayout->addLayout(addNodeForm);
@@ -99,13 +93,11 @@ MainWindow::MainWindow(QWidget *parent)
     setupGraph();
     visualizeGraph();
 
-    // Kết nối tín hiệu
+
     connect(findRouteButton, &QPushButton::clicked, this, &MainWindow::findOptimalRoute);
     connect(addNodeButton, &QPushButton::clicked, this, &MainWindow::addNode);
     connect(addLinkButton, &QPushButton::clicked, this, &MainWindow::addLink);
 }
-
-
 
 MainWindow::~MainWindow() {}
 
@@ -168,7 +160,7 @@ void MainWindow::drawAxes() {
 
 void MainWindow::visualizeGraph() {
     scene->clear();
-    drawAxes(); // Vẽ trục tọa độ
+    drawAxes();
 
     for (const auto &node : graph.nodes) {
         scene->addEllipse(node.x * 40, -node.y * 40, 20, 20); // Đảo ngược giá trị y
@@ -325,7 +317,6 @@ void MainWindow::addNode() {
         return;
     }
 
-    // Kiểm tra tọa độ hợp lệ
     bool okX, okY;
     double x = xText.toDouble(&okX);
     double y = yText.toDouble(&okY);
@@ -334,7 +325,6 @@ void MainWindow::addNode() {
         return;
     }
 
-    // Kiểm tra trùng tên node
     for (const auto &node : graph.nodes) {
         if (node.name == nodeName.toStdString()) {
             resultLabel->setText("Node name already exists.");
@@ -342,7 +332,6 @@ void MainWindow::addNode() {
         }
     }
 
-    // Thêm node mới
     graph.addNode(nodeName.toStdString(), x, y);
     startComboBox->addItem(nodeName);
     goalComboBox->addItem(nodeName);
@@ -391,12 +380,11 @@ void MainWindow::addLink() {
         return;
     }
 
-    // Thêm hoặc cập nhật liên kết giữa hai node
+
     graph.addEdge(firstIndex, secondIndex, distance);
 
     resultLabel->setText("Link added or updated successfully.");
 
-    // Cập nhật hiển thị
     resetVisualization();
 }
 
@@ -406,12 +394,10 @@ void MainWindow::exportMap() {
         return;
     }
 
-    // Lưu file JSON
     QJsonObject jsonObject;
     QJsonArray nodesArray;
     QJsonArray edgesArray;
 
-    // Ghi danh sách node
     for (const auto &node : graph.nodes) {
         QJsonObject nodeObject;
         nodeObject["name"] = QString::fromStdString(node.name);
@@ -420,7 +406,6 @@ void MainWindow::exportMap() {
         nodesArray.append(nodeObject);
     }
 
-    // Ghi danh sách liên kết
     for (const auto &[from, edges] : graph.adjList) {
         for (const auto &edge : edges) {
             QJsonObject edgeObject;
@@ -441,7 +426,6 @@ void MainWindow::exportMap() {
         jsonFile.close();
     }
 
-    // Xuất file ảnh
     QString imageFilePath = jsonFilePath;
     imageFilePath.replace(".json", ".png"); // Đổi phần mở rộng thành .png
     exportImage(imageFilePath);
@@ -450,7 +434,7 @@ void MainWindow::exportMap() {
 }
 void MainWindow::exportImage(const QString &filePath) {
     QImage image(scene->sceneRect().size().toSize(), QImage::Format_ARGB32);
-    image.fill(Qt::white); // Nền trắng
+    image.fill(Qt::white);
     QPainter painter(&image);
     scene->render(&painter);
     image.save(filePath);
@@ -477,7 +461,6 @@ void MainWindow::importMap() {
 
     QJsonObject jsonObject = jsonDoc.object();
 
-    // Xóa bản đồ hiện tại
     graph.nodes.clear();
     graph.adjList.clear();
     startComboBox->clear();
@@ -485,7 +468,6 @@ void MainWindow::importMap() {
     firstNodeComboBox->clear();
     secondNodeComboBox->clear();
 
-    // Đọc danh sách node
     QJsonArray nodesArray = jsonObject["nodes"].toArray();
     for (const QJsonValue &nodeValue : nodesArray) {
         QJsonObject nodeObject = nodeValue.toObject();
@@ -499,7 +481,6 @@ void MainWindow::importMap() {
         secondNodeComboBox->addItem(name);
     }
 
-    // Đọc danh sách liên kết
     QJsonArray edgesArray = jsonObject["edges"].toArray();
     for (const QJsonValue &edgeValue : edgesArray) {
         QJsonObject edgeObject = edgeValue.toObject();

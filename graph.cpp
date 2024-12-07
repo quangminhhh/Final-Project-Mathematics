@@ -5,21 +5,18 @@ void Graph::addNode(const std::string &name, double x, double y) {
 }
 
 void Graph::addEdge(int from, int to, double distance) {
-    // Kiểm tra nếu liên kết đã tồn tại
     for (auto &edge : adjList[from]) {
         if (edge.to == to) {
-            // Nếu liên kết tồn tại, cập nhật trọng số
             edge.distance = distance;
             for (auto &reverseEdge : adjList[to]) {
                 if (reverseEdge.to == from) {
-                    reverseEdge.distance = distance; // Cập nhật cả hướng ngược lại
+                    reverseEdge.distance = distance;
                     return;
                 }
             }
         }
     }
 
-    // Nếu liên kết chưa tồn tại, thêm mới
     adjList[from].emplace_back(to, distance);
     adjList[to].emplace_back(from, distance);
 }

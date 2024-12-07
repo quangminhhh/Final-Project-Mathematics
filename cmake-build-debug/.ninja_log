@@ -1,43 +1,50 @@
 # ninja log v6
-689	1752	1732782766092835494	CMakeFiles/untitled.dir/astar.cpp.o	6bd974cfd6318577
-1585	1821	1732785339578910676	untitled	5a24b5d636811e01
-578	1910	1732782824551003635	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	c3b97f4da6c897bb
-70	2008	1732783046648147868	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
-579	1320	1732782824551672146	CMakeFiles/untitled.dir/graph.cpp.o	4102d6d93fdd97f5
-61	1585	1732785338054475040	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
-7	60	1732785338000811222	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-7	60	1732785338000811222	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-4	805	1732785398769946696	build.ninja	d459efb22f7d3bed
-7	60	1732785338000811222	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-7	60	1732785338000811222	untitled_autogen/timestamp	2a03319531ce3b2d
-690	1741	1732782766093448591	CMakeFiles/untitled.dir/dijkstra.cpp.o	bc51ed40aa4a5a2a
-25	84	1732786761178701727	untitled_autogen/timestamp	2a03319531ce3b2d
-25	84	1732786761178701727	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-25	84	1732786761178701727	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-25	84	1732786761178701727	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-86	1507	1732786761239420979	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
-1507	1721	1732786762660235422	untitled	5a24b5d636811e01
-9	66	1732787222164836486	untitled_autogen/timestamp	2a03319531ce3b2d
-9	66	1732787222164836486	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-9	66	1732787222164836486	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-9	66	1732787222164836486	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-68	1696	1732787222223525238	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
-1696	1927	1732787223851992845	untitled	5a24b5d636811e01
-8	65	1732787422965243906	untitled_autogen/timestamp	2a03319531ce3b2d
-8	65	1732787422965243906	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-8	65	1732787422965243906	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-8	65	1732787422965243906	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-68	1599	1732787423025519107	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
-1599	1824	1732787424556536032	untitled	5a24b5d636811e01
-9	66	1732787558436965048	untitled_autogen/timestamp	2a03319531ce3b2d
-9	66	1732787558436965048	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-9	66	1732787558436965048	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-9	66	1732787558436965048	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-69	1608	1732787558497535197	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
-1608	1832	1732787560036615866	untitled	5a24b5d636811e01
-8	63	1732787703963157566	untitled_autogen/timestamp	2a03319531ce3b2d
-8	63	1732787703963157566	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-8	63	1732787703963157566	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
-8	63	1732787703963157566	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
-67	1677	1732787704022465253	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
-1677	1904	1732787705632352117	untitled	5a24b5d636811e01
+1776	2380	1733564179834644800	CMakeFiles/untitled.dir/bellman_ford.cpp.o	2824532711c2ada3
+721	1776	1733564178779150057	CMakeFiles/untitled.dir/dijkstra.cpp.o	bc51ed40aa4a5a2a
+9	540	1733565631443744000	untitled_autogen/timestamp	2a03319531ce3b2d
+9	540	1733565631443744000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+4	805	1733562370330769726	build.ninja	d459efb22f7d3bed
+9	540	1733565631443744000	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+9	540	1733565631443744000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+542	1888	1733565631459917413	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
+66	971	1733564857325068289	CMakeFiles/untitled.dir/graph.cpp.o	4102d6d93fdd97f5
+542	1968	1733565631460366568	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+541	1892	1733565631459273471	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	c3b97f4da6c897bb
+1968	2150	1733565632886131410	untitled	8f65eaccf4d414f1
+720	1779	1733564178778745443	CMakeFiles/untitled.dir/astar.cpp.o	6bd974cfd6318577
+16	887	1733573572317412000	untitled_autogen/timestamp	2a03319531ce3b2d
+16	887	1733573572317412000	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+16	887	1733573572317412000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+16	887	1733573572317412000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+891	2495	1733573572337483169	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
+891	2496	1733573572337084729	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	c3b97f4da6c897bb
+891	2572	1733573572337913190	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+2573	2823	1733573574018896698	untitled	8f65eaccf4d414f1
+11	916	1733574140938281000	untitled_autogen/timestamp	2a03319531ce3b2d
+11	916	1733574140938281000	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+11	916	1733574140938281000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+11	916	1733574140938281000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+920	2495	1733574140958595643	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
+919	2496	1733574140958218221	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	c3b97f4da6c897bb
+920	2583	1733574140958930732	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+2583	2795	1733574142621964957	untitled	8f65eaccf4d414f1
+8	63	1733574662352771773	untitled_autogen/timestamp	2a03319531ce3b2d
+8	63	1733574662352771773	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+8	63	1733574662352771773	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+8	63	1733574662352771773	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+66	1934	1733574662411490464	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+1934	2805	1733574664279399114	untitled	8f65eaccf4d414f1
+8	1166	1733575966241015000	untitled_autogen/timestamp	2a03319531ce3b2d
+8	1166	1733575966241015000	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+8	1166	1733575966241015000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+8	1166	1733575966241015000	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+1172	2745	1733575966262685865	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	c3b97f4da6c897bb
+1173	2747	1733575966263094804	CMakeFiles/untitled.dir/main.cpp.o	bb823573815e6a61
+1173	2948	1733575966263394874	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+2948	3173	1733575968038389411	untitled	8f65eaccf4d414f1
+10	74	1733576405169017418	untitled_autogen/timestamp	2a03319531ce3b2d
+10	74	1733576405169017418	untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+10	74	1733576405169017418	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/timestamp	2a03319531ce3b2d
+10	74	1733576405169017418	/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	2a03319531ce3b2d
+78	2741	1733576405237112449	CMakeFiles/untitled.dir/mainwindow.cpp.o	3ccd49a096a33b2b
+2741	2999	1733576407899808639	untitled	8f65eaccf4d414f1

@@ -4,8 +4,7 @@
 #include <vector>
 #include "graph.h"
 
-
 bool Dijkstra(const Graph &graph, int start, int goal,
-              std::vector<int> &path, double &totalDistance, double &totalCost);
+              std::vector<int> &path, double &totalDistance);
 
-#endif // DIJKSTRA_H
+#endif

@@ -22,7 +22,9 @@ add_executable(untitled main.cpp
         astar.h
         astar.cpp
         dijkstra.h
-        dijkstra.cpp)
+        dijkstra.cpp
+        bellman_ford.h
+        bellman_ford.cpp)
 target_link_libraries(untitled
         Qt::Core
         Qt::Gui

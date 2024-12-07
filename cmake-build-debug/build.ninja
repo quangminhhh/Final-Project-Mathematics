@@ -97,6 +97,14 @@ build CMakeFiles/untitled.dir/dijkstra.cpp.o: CXX_COMPILER__untitled_unscanned_D
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
+build CMakeFiles/untitled.dir/bellman_ford.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /Users/quangminh/Desktop/Discrete$ mathematics/Official/bellman_ford.cpp || cmake_object_order_depends_target_untitled
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/untitled.dir/bellman_ford.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem "/Users/quangminh/Desktop/Discrete mathematics/Official/cmake-build-debug/untitled_autogen/include" -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -105,7 +113,7 @@ build CMakeFiles/untitled.dir/dijkstra.cpp.o: CXX_COMPILER__untitled_unscanned_D
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/graph.cpp.o CMakeFiles/untitled.dir/mainwindow.cpp.o CMakeFiles/untitled.dir/astar.cpp.o CMakeFiles/untitled.dir/dijkstra.cpp.o | /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore || untitled_autogen untitled_autogen_timestamp_deps
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/graph.cpp.o CMakeFiles/untitled.dir/mainwindow.cpp.o CMakeFiles/untitled.dir/astar.cpp.o CMakeFiles/untitled.dir/dijkstra.cpp.o CMakeFiles/untitled.dir/bellman_ford.cpp.o | /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore || untitled_autogen untitled_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets  /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui  /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework OpenGL  -framework AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -F/opt/homebrew/lib
